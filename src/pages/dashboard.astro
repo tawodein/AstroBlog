@@ -1,5 +1,5 @@
 ---
-import Profileform from "../components/Profileform"
+import Blogform from "../components/Blogform"
 import Page_Layout from "../layouts/Page_Layout.astro";
 import { supabase } from "../lib/supabase";
 
@@ -64,21 +64,23 @@ const email = session.data.user?.email;
 <Page_Layout title="dashboard">
 
   <!-- Dashboard Welcome Message -->
-  <h1>Welcome user with email address: {email}</h1>
+  <h1>Welcome {email}</h1>
  
-  <p>We're glad to see you today</p>
+  <h2>We're glad to see you today</h2>
 
 
 
   
 
-    <Profileform client:only="solid" />
+    <Blogform client:only="solid" />
 
 
 
 
   <!-- Sign-Out Form -->
-  <form action="/api/auth/signout">
+
+  <form class="register-buttons" action="/api/auth/signout">
     <button type="submit">Sign Me Out</button>
   </form>
+
 </Page_Layout>

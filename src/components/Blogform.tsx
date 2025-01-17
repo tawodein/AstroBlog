@@ -21,7 +21,7 @@ export default function Form() {
   return (
     <form class="register-buttons" onSubmit={submit}>
 
-      <h2>Add a new blog post</h2>
+      <h1>Add a new blog post</h1>
 
       <label>
       <h2>Pen Name</h2>
@@ -43,7 +43,7 @@ export default function Form() {
 
 
 
-      <button>Send</button>
+      <button>Submit Post</button>
       <Suspense>{response() && <p>{response().message}</p>}</Suspense>
     </form>
   );
