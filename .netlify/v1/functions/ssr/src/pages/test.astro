@@ -1,0 +1,52 @@
+---
+import Page_Layout from "../layouts/Page_Layout.astro";
+import { supabase } from "../lib/supabase";
+import Profileform from "../components/Profileform"
+
+
+
+// Define the table you want to query
+//const tableName = 'guestbook';
+
+// Fetch data from the table
+//async function fetchData() {
+  const { data, error } = await supabase.from('guestbook').select('name');
+
+  if (error) {
+    console.error('Error fetching data:', error);
+    return;
+  }
+
+  //console.log('Fetched data:', data);
+//}
+
+// Call the fetchData function to retrieve data
+//fetchData();
+
+
+
+
+
+---
+<Page_Layout title="dashboard">
+
+  <p>We are happy to see you here</p>
+  <form action="/api/guestbook" method="post">
+    <button type="submit">Write DB</button>
+  </form>
+
+
+  <Profileform client:only="solid" />
+
+
+  <p>See all</p>
+  <h1>Welcome {JSON.stringify(data)}</h1>
+  <form action="/api/guestbook" method="get">
+    <button type="submit">Read DB</button>
+  </form>
+
+
+
+</Page_Layout>
+
+
