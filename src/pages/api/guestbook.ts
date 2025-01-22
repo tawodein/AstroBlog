@@ -3,7 +3,7 @@ import { supabase } from "../../lib/supabase";
 
 export const GET: APIRoute = async () => {
   const { data, error } = await supabase
-    .from("guestbook")
+    .from("guestbook_duplicate")
     .select("name")
     .order("created_at", { ascending: true });
 
@@ -25,7 +25,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   //const { name, message } = await request.json();
   const { data, error } = await supabase
-    .from("guestbook")
+    .from("guestbook_duplicate")
     .insert({ 
       name: "TestName", 
       message: "TestMessage" })

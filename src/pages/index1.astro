@@ -1,66 +1,35 @@
 ---
 // Your component script here!
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Post_Excerpt from '../components/Post_Excerpt.astro';
+import Page_Layout from '../layouts/Page_Layout.astro';
 ---
 
-<!DOCTYPE html>
-<html class="content">
-    <head>
-        <title>
-            Awodein Jesutofunmi - 3137211
-        </title>
-        <link rel="stylesheet" href="/style.css">
 
 
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
-
-
-
-
-    </head>
-    <body>
-        <Header />
-       
-
-
-
-
-
-        <main>
+<Page_Layout title="Sign in">
+    <main>
             
 
     
     
-                    <h1>Welcome to the Pastel Times.</h1> 
-            
-        
+        <h1>Welcome to the Pastel Times.</h1> 
 
 
-         
 
 
-            <Post_Excerpt />
-            <Post_Excerpt />
-            <Post_Excerpt />
-            <Post_Excerpt />
-            <Post_Excerpt />
-            <Post_Excerpt />
 
 
-           
-        </main>
+
+<Post_Excerpt />
+<Post_Excerpt />
+<Post_Excerpt />
+<Post_Excerpt />
+<Post_Excerpt />
+<Post_Excerpt />
 
 
-     
 
-        <Footer />
-        
-        
-    </body>
-</html>
+</main>
+  
+  </Page_Layout>
