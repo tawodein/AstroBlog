@@ -10,6 +10,7 @@ import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  integrations: [solidJs(), react()],
+  integrations: [
+    solidJs()],
   adapter: netlify()
 });
